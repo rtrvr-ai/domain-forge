@@ -1,0 +1,14 @@
+# Core (required)
+requests>=2.28
+
+# Recommended — frequency tiering for much better availability filtering.
+# Without it the tool still runs; the "tier" column just reads "unknown".
+wordfreq>=3.0
+
+# Recommended on macOS python.org builds — fixes SSL cert verification.
+certifi>=2023.0
+
+# Optional LLM providers — install ONLY the one(s) you'll use.
+# anthropic>=0.40        # Claude  (ANTHROPIC_API_KEY)
+# openai>=1.40           # OpenAI + OpenRouter  (OPENAI_API_KEY / OPENROUTER_API_KEY)
+# google-generativeai>=0.8  # Gemini  (GEMINI_API_KEY / GOOGLE_API_KEY)

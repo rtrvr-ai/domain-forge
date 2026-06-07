@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "domainforge"
+version = "1.0.0"
+description = "Find brandable, available domain names end to end — corpus + word graph + combinations + optional LLM, with real availability checks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "rtrvr.ai", email = "developers@rtrvr.ai" }]
+keywords = ["domains", "naming", "branding", "startup", "availability", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: Utilities",
+]
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+# Recommended for best results (frequency tiering + SSL roots on macOS).
+recommended = ["wordfreq>=3.0", "certifi>=2023.0"]
+# Per-provider LLM SDKs — install only what you use.
+claude = ["anthropic>=0.40"]
+openai = ["openai>=1.40"]
+gemini = ["google-generativeai>=0.8"]
+# All providers at once.
+llm = ["anthropic>=0.40", "openai>=1.40", "google-generativeai>=0.8"]
+# The works.
+all = [
+    "wordfreq>=3.0", "certifi>=2023.0",
+    "anthropic>=0.40", "openai>=1.40", "google-generativeai>=0.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/rtrvr-ai/domainforge"
+Repository = "https://github.com/rtrvr-ai/domainforge"
+Issues = "https://github.com/rtrvr-ai/domainforge/issues"
+
+[project.scripts]
+domainforge = "domainforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["domainforge*"]

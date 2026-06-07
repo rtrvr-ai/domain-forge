@@ -1,0 +1,18 @@
+{
+  "brief": "",
+  "base_words": [],
+  "categories": [],
+  "tlds": ["com", "ai"],
+  "use_affixes": true,
+  "use_blends": true,
+  "count": 10000,
+  "check": 3000,
+  "per_category": 8,
+  "max_workers": 5,
+  "provider": "auto",
+  "model": "",
+  "llm_seeds": 120,
+  "llm_coinages": 80,
+  "shortlist": 25,
+  "outdir": "domainforge_out"
+}

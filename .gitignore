@@ -1,0 +1,21 @@
+# DomainForge run outputs (examples/ is intentionally committed)
+domainforge_out/
+*_out/
+
+# Secrets & local config
+.env
+domainforge.config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# OS
+.DS_Store

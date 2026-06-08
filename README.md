@@ -9,8 +9,6 @@
 
 ![DomainForge demo](examples/demo.gif)
 
-> _No GIF yet? Generate it in one command: `vhs demo.tape` (see [demo.tape](demo.tape))._
-
 Squatters have hoovered up the obvious `.com` and `.ai` names. DomainForge
 brute-forces *creativity* instead: it takes a vibe (a brief and/or one or two
 seed words), expands it into thousands of candidates, scores them for
